@@ -23,6 +23,15 @@ Match Score + Missing Skills +
 Recommendations
 ```
 
+TimelineDay:
+
+1: Planning and creating README fileDay 
+2: Extract text from the uploaded PDFDay 
+3: Clean and preprocess resume/JD textDay 
+4: TF-IDF + Cosine Similarity → Match ScoreDay 
+5: Skill extraction → Matched & missing skillsDay 
+6: Dashboard + charts + suggestions
+
 ## ✨ Key Features
 
 - 📄 **Resume Upload** – Upload resumes in PDF format.
