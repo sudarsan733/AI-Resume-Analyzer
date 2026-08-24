@@ -6,34 +6,30 @@ Build an AI/NLP-based web application that analyzes a user's **resume against a 
 
 ## ⚙️ How It Works
 
-```text
 Resume PDF + Job Description
-            ↓
-      Text Extraction
-            ↓
-      NLP Processing
-            ↓
+↓
+Text Extraction
+↓
+NLP Processing
+↓
 TF-IDF + Cosine Similarity
-            ↓
-      Skill Extraction
-            ↓
-         Analysis
-            ↓
-Match Score + Missing Skills +
-Recommendations
-```
+↓
+Skill Extraction
+↓
+Analysis
+↓
+Match Score + Missing Skills + Recommendations
 
-TimelineDay:
 
-1: Planning and creating README fileDay 
-2: Extract text from the uploaded PDFDay 
-3: Clean and preprocess resume/JD textDay 
-4: TF-IDF + Cosine Similarity → Match ScoreDay 
-5: Skill extraction → Matched & missing skillsDay 
-6: Dashboard + charts + suggestions
+### 📅 Project Timeline
+- **Day 1:** Planning and creating README file
+- **Day 2:** Extract text from the uploaded PDF
+- **Day 3:** Clean and preprocess resume/JD text
+- **Day 4:** TF-IDF + Cosine Similarity → Match Score
+- **Day 5:** Skill extraction → Matched & missing skills
+- **Day 6:** Dashboard + charts + suggestions
 
 ## ✨ Key Features
-
 - 📄 **Resume Upload** – Upload resumes in PDF format.
 - 💼 **Job Description Input** – Analyze the resume against a specific job description.
 - 🎯 **Match Score** – Calculate how well the resume matches the job requirements.
