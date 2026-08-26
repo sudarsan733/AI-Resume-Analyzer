@@ -1,52 +1,94 @@
 # 🚀 AI Resume Analyzer
 
-## 🎯 Project Goal
+An end-to-end AI/ML project that analyzes a PDF resume against a job description.
 
-Build an AI/NLP-based web application that analyzes a user's **resume against a job description** and provides a **match score, skill analysis, and improvement suggestions**.
+## Features
+- 📄 PDF resume upload
+- 💼 Job description input
+- 🎯 Resume–job match score
+- 🧠 TF-IDF + Cosine Similarity
+- ✅ Matched skills
+- ❌ Missing skills
+- 💡 Improvement recommendations
+- 📊 Streamlit dashboard
+- 🧹 Dataset cleaning and dataset-driven skill vocabulary
 
-## ⚙️ How It Works
-
+## Workflow
+```text
+resume_data.csv
+      ↓
+Data Cleaning
+      ↓
+cleaned_resume_data.csv + skills.csv
+      ↓
 Resume PDF + Job Description
-↓
-Text Extraction
-↓
-NLP Processing
-↓
+      ↓
+Text Extraction + Cleaning
+      ↓
 TF-IDF + Cosine Similarity
-↓
-Skill Extraction
-↓
-Analysis
-↓
-Match Score + Missing Skills + Recommendations
+      ↓
+Skill Matching
+      ↓
+Score + Missing Skills + Recommendations
+```
 
+## Setup
 
-### 📅 Project Timeline
-- **Day 1:** Planning and creating README file
-- **Day 2:** Extract text from the uploaded PDF
-- **Day 3:** Clean and preprocess resume/JD text
-- **Day 4:** TF-IDF + Cosine Similarity → Match Score
-- **Day 5:** Skill extraction → Matched & missing skills
-- **Day 6:** Dashboard + charts + suggestions
+```bash
+python -m venv venv
+```
 
-## ✨ Key Features
-- 📄 **Resume Upload** – Upload resumes in PDF format.
-- 💼 **Job Description Input** – Analyze the resume against a specific job description.
-- 🎯 **Match Score** – Calculate how well the resume matches the job requirements.
-- ✅ **Matched Skills** – Identify skills present in both the resume and job description.
-- ❌ **Missing Skills** – Highlight important skills missing from the resume.
-- 📊 **Visual Dashboard** – Display analysis results using interactive charts and metrics.
-- 💡 **Improvement Suggestions** – Provide recommendations to improve resume relevance.
-- 🤖 **NLP-Based Analysis** – Use text processing and similarity techniques for resume analysis.
+Windows PowerShell:
 
-## 🛠️ Tech Stack
+```bash
+venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python src/data_cleaning.py
+streamlit run app.py
+```
 
-| Technology | Purpose |
-|---|---|
-| **Python** | Core programming language |
-| **Streamlit** | Web application interface |
-| **Scikit-learn** | TF-IDF vectorization and cosine similarity |
-| **NLP** | Text preprocessing and analysis |
-| **Pandas** | Data processing |
-| **Plotly** | Interactive data visualization |
-| **PyPDF** | Resume PDF text extraction |
+If activation is blocked:
+
+```bash
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+venv\Scripts\Activate.ps1
+```
+
+## Project Structure
+
+```text
+AI-Resume-Analyzer/
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── data/
+│   ├── resume_data.csv
+│   ├── cleaned_resume_data.csv
+│   └── skills.csv
+├── src/
+│   ├── data_cleaning.py
+│   ├── pdf_parser.py
+│   ├── text_processing.py
+│   ├── skill_extractor.py
+│   ├── matcher.py
+│   └── recommender.py
+└── assets/
+```
+
+## Dataset
+
+The provided `resume_data.csv` contains 9,544 records and resume/job-related fields, including skills, positions, job position, required skills, responsibilities, and `matched_score`.
+
+The cleaning pipeline normalizes column names, removes duplicate rows, normalizes relevant text fields, converts `matched_score` to numeric form, and extracts a unique skill vocabulary from skill-related columns.
+
+## GitHub
+
+```bash
+git init
+git add .
+git commit -m "Build AI Resume Analyzer"
+git branch -M main
+git remote add origin YOUR_REPOSITORY_URL
+git push -u origin main
+```
